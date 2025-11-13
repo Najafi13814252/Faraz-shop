@@ -1,5 +1,7 @@
+import Categories from "@/components/Categories";
+
 export default function Home() {
   return (
-    <div>Hello Faraz Shop!</div>
+    <Categories />
   )
 }
