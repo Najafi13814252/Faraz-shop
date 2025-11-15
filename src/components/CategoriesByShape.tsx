@@ -12,8 +12,9 @@ export default function CategoriesByShape() {
         { id: 1, img: '/images/mobile.webp', title: 'موبایل' },
         { id: 2, img: '/images/laptop.webp', title: 'لپ تاپ' },
         { id: 3, img: '/images/watch.webp', title: 'ساعت هوشمند' },
-        { id: 4, img: '/images/airpod.webp', title: 'هندزفری و ایرپاد' },
-        { id: 5, img: '/images/game.webp', title: 'کنسول بازی' }
+        { id: 4, img: '/images/tablet.webp', title: 'تبلت' },
+        { id: 5, img: '/images/airpod.webp', title: 'هندزفری و ایرپاد' },
+        { id: 6, img: '/images/game.webp', title: 'کنسول بازی' }
     ]
 
     return (

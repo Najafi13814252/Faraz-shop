@@ -1,14 +1,13 @@
 import { Icon } from "@iconify/react";
-import Image from "next/image";
+// import Image from "next/image";
 
 
 export default function Navbar() {
   return (
     <>
-      <header className="flex items-center justify-between mx-2 my-2 md:ml-14 md:my-0 mb-4 text-gray-800">
-        <div className="flex items-center w-full md:w-fit">
-          <Image className="hidden md:block" src="/images/logo.avif" width="146" height="44" alt="Logo" />
-
+      <header className="flex items-center justify-between p-6 text-gray-800">
+        <div className="flex items-center gap-8 w-full md:w-fit">
+          <img className="hidden md:block w-full h-12" src="/images/logo.webp" alt="Logo" />
 
           <div className="flex items-center gap-2 px-4 w-full bg-gray-200 rounded-lg">
             <Icon className="text-lg text-gray-500" icon="solar:magnifer-outline" />
