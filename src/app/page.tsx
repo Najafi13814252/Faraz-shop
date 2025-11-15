@@ -15,8 +15,8 @@ export default function Home() {
         <CategoriesByShape />
         <DiscountProducts />
         <div className="flex items-center gap-6">
-          <Image className="w-full aspect-auto rounded-2xl" src="/images/banner_1.webp" width="650" height="200" alt="Banner" />
-          <Image className="w-full aspect-auto rounded-2xl" src="/images/banner_2.webp" width="650" height="200" alt="Banner" />
+          <Image className="aspect-auto rounded-2xl" src="/images/banner_1.webp" width="650" height="200" alt="Banner" />
+          <Image className="aspect-auto rounded-2xl" src="/images/banner_2.webp" width="650" height="200" alt="Banner" />
         </div>
         <WatchProducts />
         <Image className="w-full aspect-auto rounded-2xl" src="/images/banner_3.webp" width="2048" height="377" alt="Banner" />
