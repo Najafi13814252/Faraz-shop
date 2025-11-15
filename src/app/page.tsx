@@ -14,9 +14,9 @@ export default function Home() {
       <div className="px-16 flex flex-col gap-10">
         <CategoriesByShape />
         <DiscountProducts />
-        <div className="flex items-center gap-6">
-          <Image className="aspect-auto rounded-2xl" src="/images/banner_1.webp" width="650" height="200" alt="Banner" />
-          <Image className="aspect-auto rounded-2xl" src="/images/banner_2.webp" width="650" height="200" alt="Banner" />
+        <div className="flex items-center justify-between gap-6">
+          <Image className="aspect-auto rounded-2xl" src="/images/banner_1.webp" width="685" height="200" alt="Banner" />
+          <Image className="aspect-auto rounded-2xl" src="/images/banner_2.webp" width="685" height="200" alt="Banner" />
         </div>
         <WatchProducts />
         <Image className="w-full aspect-auto rounded-2xl" src="/images/banner_3.webp" width="2048" height="377" alt="Banner" />
