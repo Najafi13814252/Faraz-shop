@@ -3,3 +3,13 @@
 @theme {
     --font-IRANYekan: "IRANYekan", sans-serif;
 }
+
+input[type=range]::-webkit-slider-thumb {
+    pointer-events: auto;
+    width: 20px;
+    height: 20px;
+    cursor: move;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    @apply bg-sky-500
+}

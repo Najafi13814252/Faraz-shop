@@ -3,6 +3,7 @@ type Products = {
     img: string
     name: string
     category: string
+    rate: number
     price: number
     off: number
 }

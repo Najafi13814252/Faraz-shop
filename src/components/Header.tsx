@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 export default function Navbar() {
   return (
     <>
-      <header className="flex items-center justify-between p-6 text-gray-800">
+      <header className="flex items-center justify-between px-5 pt-5 pb-3 text-gray-800">
         <div className="flex items-center gap-8 w-full md:w-fit">
           <img className="hidden md:block w-full h-12" src="/images/logo.webp" alt="Logo" />
 
@@ -31,6 +31,7 @@ export default function Navbar() {
           </button>
         </div>
       </header>
+      <hr className="text-gray-300"/>
     </>
   )
 }
