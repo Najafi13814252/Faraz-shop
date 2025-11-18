@@ -12,7 +12,7 @@ export default function CtegoryProductLayout({ children }: Readonly<{ children: 
 
 
                     {/* product table */}
-                    <div className="w-4/5 flex flex-col gap-4 mr-5">
+                    <div className="w-4/5 flex flex-col gap-2 mr-5 mt-2">
                         {/* breadcrumb */}
                         <div className="mr-2 my-2">فراز شاپ / موبایل</div>
 

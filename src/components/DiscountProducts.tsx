@@ -1,11 +1,9 @@
 import products from "@/data/products"
-import Card from "./Card";
-import SectionProducts from "./SectionProducts";
+import SwiperSlider from "./SwiperSlider"
 
 export default function DiscountProducts() {
+    const discountedProducts = products.filter(p => p.off !== 0)
     return (
-        <SectionProducts discountBox={true} title="فروش ویژه">
-            <Card products={products.filter(card => card.off !== 0)}/>
-        </SectionProducts>
+        <SwiperSlider products={discountedProducts} discountBox={true} title="فروش ویژه"/>
     )
 }

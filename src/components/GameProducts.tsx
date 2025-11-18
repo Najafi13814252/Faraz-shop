@@ -1,11 +1,9 @@
-import products from "@/data/products";
-import Card from "./Card";
-import SectionProducts from "./SectionProducts";
+import products from "@/data/products"
+import SwiperSlider from "./SwiperSlider";
 
-export default function GameProducts() {
+export default function DiscountProducts() {
+    const gameProducts = products.filter(p => p.category === "game")
     return (
-        <SectionProducts title="کنسول‌های بازی در فراز شاپ">
-            <Card products={products.filter(card => card.category === "game")} />
-        </SectionProducts>
+        <SwiperSlider products={gameProducts} title="کنسول‌های بازی"/>
     )
 }
