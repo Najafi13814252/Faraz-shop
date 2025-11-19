@@ -1,14 +1,18 @@
 import SideFilter from '@/components/SideFilter'
 import { Icon } from '@iconify/react'
-import React, { Children } from 'react'
 
-export default function CtegoryProductLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+type Props = {
+    children: React.ReactNode
+    params: { category: string }
+}
+
+export default function CtegoryProductLayout({ children, params }: Props) {
     return (
         <div className="mx-10 my-5">
             <div className="flex flex-col gap-10">
                 <div className="w-full flex">
                     {/* side filter */}
-                    <SideFilter />
+                    <SideFilter category={params.category}/>
 
 
                     {/* product table */}

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 
-export default function RangeSlider({ initialMin, initialMax, min, max, step, priceCap }: { initialMin: number, initialMax: number, min: number, max: number, step: number, priceCap: number }) {
+export default function RangeSlider({ initialMin, initialMax, min, max, step }: { initialMin: number, initialMax: number, min: number, max: number, step: number }) {
 
     const [minValue, setMinValue] = useState(initialMin)
     const [maxValue, setMaxValue] = useState(initialMax)
