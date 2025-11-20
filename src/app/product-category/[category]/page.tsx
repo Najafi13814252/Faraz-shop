@@ -3,7 +3,7 @@ import products from "@/data/products";
 import { Icon } from "@iconify/react";
 
 type Props = {
-  searchParams?: { sort?: string };
+  searchParams: { sort?: string };
 }
 
 export default function CategoryProducts({ searchParams }: Props) {

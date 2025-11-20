@@ -4,7 +4,7 @@ import SortingFilter from '@/components/SortingFilter'
 type Props = {
     children: React.ReactNode
     params: { category: string }
-    searchParams?: { sort?: string }
+    searchParams: { sort?: string }
 }
 
 export default function CtegoryProductLayout({ children, params, searchParams }: Props) {
@@ -23,7 +23,7 @@ export default function CtegoryProductLayout({ children, params, searchParams }:
                         <div className="mr-2 my-2">فراز شاپ / موبایل</div>
 
                         {/* product filter  */}
-                        <SortingFilter category={params.category} currentSort={sort}/>
+                        <SortingFilter category={params.category}/>
                         {children}
                     </div>
                 </div>

@@ -1,18 +1,25 @@
+'use client'
+
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 
 type Props = {
-    category: string;
-    currentSort: string;
+    category: string
 }
 
-export default function SortingFilter({ category, currentSort }: Props) {
+export default function SortingFilter({ category }: Props) {
+
+    const searchParams = useSearchParams();
+    const currentSort = searchParams.get("sort") || "default";
 
     const options = [
+        { label: "همه‌ محصولات", value: "default" },
         { label: "بیشترین قیمت", value: "highPrice" },
         { label: "کمترین قیمت", value: "lowPrice" },
         { label: "بیشترین تخفیف", value: "discount" }
     ]
+    
 
     return (
         <div className="flex items-center justify-between border border-gray-300 rounded-2xl p-4">
@@ -23,8 +30,8 @@ export default function SortingFilter({ category, currentSort }: Props) {
                 </div>
                 <ul className="flex items-center gap-8 text-gray-700 text-sm">
                     {options.map(option => (
-                        <li key={option.value} className={currentSort === option.value ? 'text-sky-500' : ''}>
-                            <Link href={`/product-category/${category}?sort=${option.value}`}>
+                        <li key={option.value}>
+                            <Link href={`/product-category/${category}?sort=${option.value}`} className={currentSort === option.value ? 'text-sky-500' : ''}>
                                 {option.label}
                             </Link>
                         </li>
