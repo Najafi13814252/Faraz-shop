@@ -14,7 +14,7 @@ export default function SideFilter({ category }: { category: string }) {
         setOpenItems((prev) => ({ ...prev, [key]: !prev[key] }));
     };
 
-    const productFilters = filterProducts.filter((p) => p.category === category)[0];
+    const productFilters = filterProducts.filter((p) => p.category === category)[0]
 
     return (
         <div className="w-1/5 flex flex-col gap-8 h-full border border-gray-300 rounded-2xl p-4">

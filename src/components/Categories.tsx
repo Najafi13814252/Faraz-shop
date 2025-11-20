@@ -1,6 +1,5 @@
 "use client"
 
-import categories from "@/data/categories";
 import { Icon } from "@iconify/react";
 
 type HeadCategory = {

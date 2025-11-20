@@ -1,12 +1,14 @@
 import SideFilter from '@/components/SideFilter'
-import { Icon } from '@iconify/react'
+import SortingFilter from '@/components/SortingFilter'
 
 type Props = {
     children: React.ReactNode
     params: { category: string }
+    searchParams?: { sort?: string }
 }
 
-export default function CtegoryProductLayout({ children, params }: Props) {
+export default function CtegoryProductLayout({ children, params, searchParams }: Props) {
+    const sort = searchParams?.sort || 'default'
     return (
         <div className="mx-10 my-5">
             <div className="flex flex-col gap-10">
@@ -21,22 +23,7 @@ export default function CtegoryProductLayout({ children, params }: Props) {
                         <div className="mr-2 my-2">فراز شاپ / موبایل</div>
 
                         {/* product filter  */}
-                        <div className="flex items-center justify-between border border-gray-300 rounded-2xl p-4">
-                            <div className="flex items-center gap-4">
-                                <div className="flex items-center gap-2 text-gray-900 font-medium">
-                                    <Icon className="text-3xl" icon="solar:sort-from-top-to-bottom-outline" />
-                                    <span>مرتب سازی:</span>
-                                </div>
-                                <ul className="flex items-center gap-8 text-gray-700">
-                                    <li>پرفروش‌ترین</li>
-                                    <li>بیشترین قیمت</li>
-                                    <li>کمترین قیمت</li>
-                                    <li>جدیدترین</li>
-                                    <li>بیشترین تخفیف</li>
-                                </ul>
-                            </div>
-                            <span>3,500 کالا</span>
-                        </div>
+                        <SortingFilter category={params.category} currentSort={sort}/>
                         {children}
                     </div>
                 </div>
