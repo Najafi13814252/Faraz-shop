@@ -9,7 +9,7 @@ type Props = {
 export default function CategoryProducts({ searchParams }: Props) {
 
   const sort = searchParams?.sort || 'default';
-  let sortedProducts = [...products]
+  const sortedProducts = [...products]
 
   switch (sort) {
     case "highPrice": sortedProducts.sort((a, b) => b.price - a.price); break;

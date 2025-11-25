@@ -1,4 +1,4 @@
-import Categories from "@/components/Categories";
+import Navbar from "@/components/Navbar";
 import CategoriesByShape from "@/components/CategoriesByShape";
 import DiscountProducts from "@/components/DiscountProducts";
 import WatchProducts from "@/components/WatchProducts";
@@ -9,7 +9,7 @@ import GameProducts from "@/components/GameProducts";
 export default function Home() {
   return (
     <>
-      <Categories />
+      <Navbar />
       <Sliders />
       <div className="px-16 flex flex-col gap-10">
         <CategoriesByShape />

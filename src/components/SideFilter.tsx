@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import RangeSlider from "./RangeSlider";
-import filterProducts from "@/data/filterProducts";
+import categories from "@/data/categories";
 
 export default function SideFilter({ category }: { category: string }) {
     const [openItems, setOpenItems] = useState<{ [key: string]: boolean }>({
@@ -14,7 +14,7 @@ export default function SideFilter({ category }: { category: string }) {
         setOpenItems((prev) => ({ ...prev, [key]: !prev[key] }));
     };
 
-    const productFilters = filterProducts.filter((p) => p.category === category)[0]
+    const productFilters = categories.filter((p) => p.category === category)[0]
 
     return (
         <div className="w-1/5 flex flex-col gap-8 h-full border border-gray-300 rounded-2xl p-4">
@@ -43,13 +43,13 @@ export default function SideFilter({ category }: { category: string }) {
             </div>
 
             {/* OTHER FILTERS */}
-            {productFilters?.filters.map((filter, idx) => (
+            {productFilters?.categoryFilters.map((filter, idx) => (
                 <div key={filter.id} className="flex flex-col">
                     <button
                         onClick={() => toggle(filter.id.toString())}
                         className={`
                             flex items-center justify-between pb-4 cursor-pointer
-                            ${idx === productFilters.filters.length - 1 
+                            ${idx === productFilters.categoryFilters.length - 1 
                                 ? openItems[filter.id] 
                                     ? "border-b border-b-gray-200"
                                     : "border-b-0"                 

@@ -6,6 +6,7 @@ export default function Navbar() {
     <>
       <header className="flex items-center justify-between px-5 pt-5 pb-3 text-gray-800">
         <div className="flex items-center gap-8 w-full md:w-fit">
+          {/* logo */}
           <Link href="/">
             <img className="hidden md:block w-full h-12" src="/images/logo.webp" alt="Logo" />
           </Link>

@@ -3,9 +3,16 @@ type Categories = {
     name: string
     icon: string
     iconColor: string
-    subCategory: {
+    filterBorder: string
+    filterBg: string
+    hoverColor: string
+    category: string
+    categoryFilters: {
         id: number
-        name: string
-        icon: string
+        label: string
+        subFilter: {
+            id: number
+            label: string | number
+        }[]
     }[]
 }
