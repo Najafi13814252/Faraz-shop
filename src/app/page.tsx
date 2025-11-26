@@ -11,10 +11,10 @@ export default function Home() {
     <>
       <Navbar />
       <Sliders />
-      <div className="px-16 flex flex-col gap-10">
+      <div className="px-2 md:px-16 flex flex-col gap-10">
         <CategoriesByShape />
         <DiscountProducts />
-        <div className="flex items-center justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <Image className="aspect-auto rounded-2xl" src="/images/banner_1.webp" width="685" height="200" alt="Banner" />
           <Image className="aspect-auto rounded-2xl" src="/images/banner_2.webp" width="685" height="200" alt="Banner" />
         </div>

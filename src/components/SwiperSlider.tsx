@@ -26,6 +26,7 @@ export default function SwiperSlider({products, discountBox, title}: Props) {
                     }}
                     watchSlidesProgress={true}
                     breakpoints={{
+                        360: { slidesPerView: 1.2 },
                         640: { slidesPerView: 2 },
                         1024: { slidesPerView: 5 },
                     }}

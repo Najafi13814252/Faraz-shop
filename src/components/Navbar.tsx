@@ -31,7 +31,7 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="mx-5 mt-4 relative">
+        <nav className="hidden md:block mx-5 mt-4 relative">
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-12">
                     {headCategories.map(category => (

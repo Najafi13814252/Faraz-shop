@@ -53,7 +53,7 @@ const mobileFooter: Item[] = [
 export default function Footer() {
     return (
         <>
-            <footer className="mt-10 w-full py-10 md:pr-20 bg-sky-700">
+            <footer className="mt-10 w-full pt-10 pb-20 pr-2 md:pr-20 bg-sky-700">
                 <div className="flex flex-col md:flex-row gap-16 md:gap-36 items-center text-white">
                     {/* introduction */}
                     <div className="flex flex-col gap-6">
