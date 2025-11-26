@@ -4,11 +4,9 @@ import SortingFilter from '@/components/SortingFilter'
 type Props = {
     children: React.ReactNode
     params: { category: string }
-    searchParams: { sort?: string }
 }
 
-export default function CtegoryProductLayout({ children, params, searchParams }: Props) {
-    const sort = searchParams?.sort || 'default'
+export default function CtegoryProductLayout({ children, params }: Props) {
     return (
         <div className="mx-10 my-5">
             <div className="flex flex-col gap-10">
