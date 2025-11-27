@@ -33,12 +33,12 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="hidden md:block mr-5 mt-4 relative">
+        <nav className="hidden lg:block mx-3 mt-4 relative">
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-12">
                     {headCategories.map(category => (
                         <button key={category.id} className="flex items-center gap-2 cursor-pointer" onClick={() => handleCategoryClick(category.id)}>
-                            <Icon className={`text-2xl ${category.iconColor}`} icon={category.icon} />
+                            <Icon className={`text-xl ${category.iconColor}`} icon={category.icon} />
                             <span className="text-gray-800 text-sm">{category.name}</span>
                             {category.id === 1 && (
                                 <Icon className="text-lg text-gray-500 relative top-0.5" icon="solar:alt-arrow-down-outline" />
@@ -46,7 +46,7 @@ export default function Navbar() {
                         </button>
                     ))}
                 </div>
-                <div className="flex items-center gap-2 bg-sky-100/90 px-4 py-2 rounded-lg text-sky-500 cursor-pointer">
+                <div className="hidden xl:flex items-center gap-2 bg-sky-100/90 px-4 py-2 rounded-lg text-sky-500 cursor-pointer">
                     <span className="font-medium">021-12345</span>
                     <Icon className="text-2xl" icon="solar:phone-calling-rounded-outline" />
                 </div>
