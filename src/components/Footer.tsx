@@ -44,10 +44,9 @@ const links: Links = {
 
 const mobileFooter: Item[] = [
     { id: 1, title: "خانه", icon_name: "solar:home-angle-bold" },
-    { id: 2, title: "جستجو", icon_name: "solar:minimalistic-magnifer-outline" },
-    { id: 3, title: "دسته‌بندی‌ها", icon_name: "solar:widget-2-outline" },
-    { id: 4, title: "آموزش‌های من", icon_name: "solar:notebook-outline" },
-    { id: 5, title: "پروفایل", icon_name: "solar:user-outline" },
+    { id: 2, title: "دسته‌بندی‌ها", icon_name: "solar:widget-2-outline" },
+    { id: 3, title: "سبد خرید", icon_name: "solar:cart-large-2-outline" },
+    { id: 4, title: "پروفایل من", icon_name: "solar:user-outline" },
 ];
 
 export default function Footer() {
@@ -123,16 +122,18 @@ export default function Footer() {
             </footer>
 
             {/* mobile footer */}
-            <div className="fixed bottom-0 w-full flex md:hidden justify-between items-center py-2 px-4 z-20 bg-white shadow-lg border-t border-t-gray-200">
-                {mobileFooter.map((menu) => (
-                    <button
-                        key={menu.id}
-                        className="flex flex-col items-center gap-1 text-main-100 cursor-pointer"
-                    >
-                        <Icon className="text-xl" icon={menu.icon_name!} />
-                        <span className="text-xs">{menu.title}</span>
-                    </button>
-                ))}
+            <div className="px-3 fixed bottom-1 w-full z-20">
+                <div className="flex md:hidden justify-between items-center py-2 px-4 bg-blue-700 shadow-lg text-white rounded-2xl ">
+                    {mobileFooter.map((menu) => (
+                        <button
+                            key={menu.id}
+                            className="flex flex-col items-center gap-1 text-main-100 cursor-pointer font-medium"
+                        >
+                            <Icon className="text-xl" icon={menu.icon_name!} />
+                            <span className="text-xs">{menu.title}</span>
+                        </button>
+                    ))}
+                </div>
             </div>
         </>
     );
