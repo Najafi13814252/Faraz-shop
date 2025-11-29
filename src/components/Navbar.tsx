@@ -11,8 +11,8 @@ type HeadCategory = {
     name: string
 }
 
-const headCategories: HeadCategory[] = [
-    { id: 1, icon: 'solar:hamburger-menu-outline', iconColor: 'text-gray-800', name: 'دسته‌بندی‌ها' },
+export const headCategories: HeadCategory[] = [
+    { id: 1, icon: 'solar:hamburger-menu-outline', iconColor: 'text-gray-800', name: 'دسته‌بندی‌ کالاها' },
     { id: 2, icon: 'solar:chat-round-line-line-duotone', iconColor: 'text-green-500', name: 'پرسش‌های متداول' },
     { id: 3, icon: 'solar:info-circle-line-duotone', iconColor: 'text-blue-500', name: 'درباره ما' },
     { id: 4, icon: 'solar:sale-line-duotone', iconColor: 'text-rose-500', name: 'جشنواره تخفیف' },

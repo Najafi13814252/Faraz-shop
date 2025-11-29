@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { useState } from "react";
+import CategoriesOnMobile from "./CategoriesOnMobile";
 
 interface Item {
     id: number;
@@ -16,40 +18,49 @@ interface Links {
     apps: Item[];
 }
 
-const links: Links = {
-    quick: [
-        { id: 1, title: "صفحه اصلی" },
-        { id: 2, title: "درباره ما" },
-        { id: 3, title: "دوره‌های پیشنهادی" },
-        { id: 4, title: "مدرسین" },
-    ],
-    useful: [
-        { id: 1, title: "ارتباط با ما" },
-        { id: 2, title: "دوره‌ها" },
-        { id: 3, title: "دروس" },
-        { id: 4, title: "ایجاد حساب کاربری" },
-    ],
-    concat: [
-        { id: 1, title: "Farazshop@gmail.com", icon_name: "solar:letter-opened-outline" },
-        { id: 2, title: "4567 123 9812+", icon_name: "solar:phone-calling-outline" },
-        { id: 3, title: "ایران", icon_name: "solar:map-point-outline" },
-    ],
-    apps: [
-        { id: 1, icon_name: "akar-icons:instagram-fill" },
-        { id: 2, icon_name: "akar-icons:linkedinv2-fill" },
-        { id: 3, icon_name: "akar-icons:x-fill" },
-        { id: 4, icon_name: "akar-icons:whatsapp-fill" },
-    ],
-};
-
-const mobileFooter: Item[] = [
-    { id: 1, title: "خانه", icon_name: "solar:home-angle-bold" },
-    { id: 2, title: "دسته‌بندی‌ها", icon_name: "solar:widget-2-outline" },
-    { id: 3, title: "سبد خرید", icon_name: "solar:cart-large-2-outline" },
-    { id: 4, title: "پروفایل من", icon_name: "solar:user-outline" },
-];
-
 export default function Footer() {
+    const links: Links = {
+        quick: [
+            { id: 1, title: "صفحه اصلی" },
+            { id: 2, title: "درباره ما" },
+            { id: 3, title: "دوره‌های پیشنهادی" },
+            { id: 4, title: "مدرسین" },
+        ],
+        useful: [
+            { id: 1, title: "ارتباط با ما" },
+            { id: 2, title: "دوره‌ها" },
+            { id: 3, title: "دروس" },
+            { id: 4, title: "ایجاد حساب کاربری" },
+        ],
+        concat: [
+            { id: 1, title: "Farazshop@gmail.com", icon_name: "solar:letter-opened-outline" },
+            { id: 2, title: "4567 123 9812+", icon_name: "solar:phone-calling-outline" },
+            { id: 3, title: "ایران", icon_name: "solar:map-point-outline" },
+        ],
+        apps: [
+            { id: 1, icon_name: "akar-icons:instagram-fill" },
+            { id: 2, icon_name: "akar-icons:linkedinv2-fill" },
+            { id: 3, icon_name: "akar-icons:x-fill" },
+            { id: 4, icon_name: "akar-icons:whatsapp-fill" },
+        ],
+    };
+
+    const mobileFooter: Item[] = [
+        { id: 1, title: "خانه", icon_name: "solar:home-angle-bold" },
+        { id: 2, title: "دسته‌بندی‌ها", icon_name: "solar:widget-2-outline" },
+        { id: 3, title: "سبد خرید", icon_name: "solar:cart-large-2-outline" },
+        { id: 4, title: "پروفایل من", icon_name: "solar:user-outline" },
+    ];
+
+    const [showMenu, setShowMenu] = useState(false)
+
+    const openMenu = (menuID: number) => {
+        if (menuID === 2) {
+            setShowMenu(true)
+        } else {
+            setShowMenu(false)
+        }
+    }
     return (
         <>
             <footer className="mt-10 w-full pt-10 pb-20 pr-2 md:pr-20 bg-sky-700">
@@ -122,12 +133,13 @@ export default function Footer() {
             </footer>
 
             {/* mobile footer */}
-            <div className="px-3 fixed bottom-1 w-full z-20">
-                <div className="flex md:hidden justify-between items-center py-2 px-4 bg-blue-700 shadow-lg text-white rounded-2xl ">
+            <div className="fixed bottom-0 w-full z-20">
+                <div className="flex md:hidden justify-between items-center py-2 px-4 bg-blue-700 shadow-lg text-white">
                     {mobileFooter.map((menu) => (
                         <button
                             key={menu.id}
                             className="flex flex-col items-center gap-1 text-main-100 cursor-pointer font-medium"
+                            onClick={() => openMenu(menu.id)}
                         >
                             <Icon className="text-xl" icon={menu.icon_name!} />
                             <span className="text-xs">{menu.title}</span>
@@ -135,6 +147,10 @@ export default function Footer() {
                     ))}
                 </div>
             </div>
+
+            {showMenu && (
+                <CategoriesOnMobile onClose={() => setShowMenu(false)}/>
+            )}
         </>
     );
 }
