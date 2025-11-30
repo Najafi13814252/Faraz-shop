@@ -19,7 +19,7 @@ export default function Home() {
           <Image className="aspect-auto rounded-2xl" src="/images/banner_2.webp" width="685" height="200" alt="Banner" />
         </div>
         <WatchProducts />
-        <Image className="w-full aspect-auto rounded-2xl" src="/images/banner_3.webp" width="2048" height="377" alt="Banner" />
+        <Image className="aspect-auto rounded-2xl" src="/images/banner_3.webp" width="2048" height="377" alt="Banner" />
         <GameProducts />
       </div>
     </>
