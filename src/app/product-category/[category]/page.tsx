@@ -6,7 +6,7 @@ type Props = {
   searchParams?: { sort?: string }
 }
 
-export default async function CategoryProducts({ searchParams }: Props) {
+export default function CategoryProducts({ searchParams }: Props) {
 
   const {sort = "default"} = searchParams || {}
   const sortedProducts = [...products]
