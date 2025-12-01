@@ -3,12 +3,12 @@ import products from "@/data/products";
 import { Icon } from "@iconify/react";
 
 type Props = {
-  searchParams: Promise<{ sort?: string }>
+  searchParams?: { sort?: string }
 }
 
 export default async function CategoryProducts({ searchParams }: Props) {
 
-  const {sort = "default"} = await searchParams
+  const {sort = "default"} = searchParams || {}
   const sortedProducts = [...products]
 
   switch (sort) {
