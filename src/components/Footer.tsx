@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
-import CategoriesOnMobile from "./CategoriesOnMobile";
+import MobileMenu from "./categoryOnMobile/MobileMenu";
 
 interface Item {
     id: number;
@@ -149,7 +149,7 @@ export default function Footer() {
             </div>
 
             {showMenu && (
-                <CategoriesOnMobile onClose={() => setShowMenu(false)}/>
+                <MobileMenu onClose={() => setShowMenu(false)}/>
             )}
         </>
     );

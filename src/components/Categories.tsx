@@ -1,17 +1,19 @@
 "use client"
 
-import categories from "@/data/categories";
-import { Icon } from "@iconify/react";
 import { useState } from "react";
+
+import { Icon } from "@iconify/react";
+
+import categories from "@/data/categories";
 
 export default function Categories() {
 
-    const [showFilters, setShowFilters] = useState(1)
+    const [showFilters, setShowFilters] = useState(categories[0]?.id)
 
     const selectedCategory = categories.find(c => c.id === showFilters)
 
     return (
-        <div className="bg-white border border-gray-200 rounded-2xl shadow mt-2 flex w-fit absolute top-full right0 z-30">
+        <div className="bg-white border border-gray-100 rounded-2xl shadow-sm mt-2 flex w-fit absolute top-full right0 z-30">
             {/* categories */}
             <div className="flex flex-col gap-2 pl-4 p-2 border-l border-gray-200">
                 {categories.map(caterory => (
@@ -30,9 +32,10 @@ export default function Categories() {
                     <div key={filter.id} className="flex flex-col">
                         <span className={`border-r-4 pr-2 rounded ${selectedCategory.filterBorder}`}>{filter.label}</span>
 
+                        {/* sub filters */}
                         <div className="flex flex-col gap-4 mt-2 relative right-3">
                             {filter.subFilter.map(sub => (
-                                <span key={sub.id} className={`text-sm cursor-pointer duration-200 hover:${selectedCategory.iconColor} ${selectedCategory.hoverColor}`}>{sub.label}</span>
+                                <span key={sub.id} className={`text-sm cursor-pointer duration-200  ${selectedCategory.hoverColor}`}>{sub.label}</span>
                             ))}
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from 'next/font/local'
-import Header from "@/components/Header";
+import HeaderTop from "@/components/navbar/HeaderTop";
 import Footer from "@/components/Footer";
 
 const iranYekan = localFont({
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl" className={iranYekan.className}>
       <body>
-        <Header />
+        <HeaderTop />
         {children}
         <Footer />
       </body>

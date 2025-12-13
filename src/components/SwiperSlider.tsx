@@ -12,9 +12,10 @@ interface Props {
     title: string
 }
 
-export default function SwiperSlider({products, discountBox, title}: Props) {
-  return (
-    <div className="relative">
+export default function SwiperSlider({ products, discountBox, title }: Props) {
+    
+    return (
+        <div className="relative">
             <SectionProducts discountBox={discountBox} title={title}>
                 <Swiper
                     className="my-6"
@@ -24,7 +25,6 @@ export default function SwiperSlider({products, discountBox, title}: Props) {
                         nextEl: '.my-swiper-button-next',
                         prevEl: '.my-swiper-button-prev',
                     }}
-                    watchSlidesProgress={true}
                     breakpoints={{
                         360: { slidesPerView: 1.2 },
                         640: { slidesPerView: 2 },
@@ -48,5 +48,5 @@ export default function SwiperSlider({products, discountBox, title}: Props) {
                 </button>
             </SectionProducts>
         </div>
-  )
+    )
 }

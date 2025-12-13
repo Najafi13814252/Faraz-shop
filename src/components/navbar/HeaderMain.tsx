@@ -1,8 +1,10 @@
 "use client"
 
-import { Icon } from "@iconify/react";
-import Categories from "./Categories";
 import { useState } from "react";
+
+import { Icon } from "@iconify/react";
+
+import Categories from "../Categories";
 
 type HeadCategory = {
     id: number
@@ -22,13 +24,13 @@ export const headCategories: HeadCategory[] = [
 
 export default function Navbar() {
 
-    const [showCategory, setShowCategory] = useState(false)
+    const [isShowCategory, setIsShowCategory] = useState(false)
 
     const handleCategoryClick = (id: number) => {
         if (id === 1) {
-            setShowCategory(prev => !prev);
+            setIsShowCategory(prev => !prev);
         } else {
-            setShowCategory(false);
+            setIsShowCategory(false);
         }
     }
 
@@ -51,8 +53,10 @@ export default function Navbar() {
                     <Icon className="text-2xl" icon="solar:phone-calling-rounded-outline" />
                 </div>
             </div>
-            {showCategory && (
-                <Categories />
+            {isShowCategory && (
+                <div>
+                    <Categories />
+                </div>
             )}
         </nav>
     )
