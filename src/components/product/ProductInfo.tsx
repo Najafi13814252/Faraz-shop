@@ -54,7 +54,7 @@ function ProductInfo() {
 
                     <div className="grid grid-cols-3 gap-2">
                         {features.map(feature => (
-                            <div className="bg-gray-200/60 rounded-md px-4 py-3 flex flex-col gap-1.5 text-xs" key={feature.id}>
+                            <div className="bg-gray-200/50 rounded-md px-4 py-3 flex flex-col gap-1.5 text-xs" key={feature.id}>
                                 <span className="text-gray-500">{feature.title_1}</span>
                                 <span className="text-gray-800">{feature.title_2}</span>
                             </div>
@@ -72,7 +72,7 @@ function ProductInfo() {
                     </div>
                 </section>
 
-                <section className="px-4 border-2 border-dashed border-gray-200 rounded-2xl">
+                <section className="px-4 border-2 border-dashed border-gray-200 rounded-2xl -mt-5">
                     <div className="flex items-center gap-4">
                         <Icon className="text-7xl text-sky-600" icon="solar:info-circle-bold" />
                         <p className="text-xs max-w-lg text-sky-700">امکان برگشت کالا در گروه موبایل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمب کالا باز نشده باشد. تمام گوشی‌های دیجی‌کالا ضمانت رجیستری دارند. در صورت وجود مشکل رجیستری، می‌توانید بعد از مهلت قانونی ۳۰ روزه، گوشی خریداری‌شده را مرجوع کنید.</p>
