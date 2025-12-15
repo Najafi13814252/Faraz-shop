@@ -16,7 +16,7 @@ function ProductLayout({ children, gallery, buyCard }: {
         </div>
 
         {/* باکس خرید */}
-        <div className="w-1/4 h-fit p-4 bg-gray-50 border border-gray-200 rounded-2xl">
+        <div className="w-1/4 h-fit p-4 bg-gray-50 border border-gray-200 rounded-2xl sticky top-20">
           {buyCard}
         </div>
       </div>

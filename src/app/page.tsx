@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import HeaderMain from "@/components/navbar/HeaderMain";
 import CategoriesByShape from "@/components/CategoriesByShape";
 import DiscountProducts from "@/components/DiscountProducts";
 import WatchProducts from "@/components/WatchProducts";
@@ -10,7 +9,6 @@ import GameProducts from "@/components/GameProducts";
 export default function Home() {
   return (
     <>
-      <HeaderMain />
       <Sliders />
       <div className="px-2 md:px-16 flex flex-col gap-10">
         <CategoriesByShape />

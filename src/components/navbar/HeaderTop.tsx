@@ -4,10 +4,11 @@ import Link from "next/link";
 import SearchBox from "./SearchBox";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
+import HeaderMain from "@/components/navbar/HeaderMain";
 
 export default function Navbar() {
   return (
-    <header className="w-full sticky top-0 z-50 bg-white">
+    <header className="w-full sticky top-0 z-50 bg-white border-b border-b-gray-300">
       <div className="mx-auto px-3 py-3 flex items-center justify-between gap-4">
 
         {/* LEFT → Logo + SearchBox (always visible) */}
@@ -34,6 +35,8 @@ export default function Navbar() {
         <MobileMenu />
 
       </div>
+
+      <HeaderMain />
     </header>
   );
 }
