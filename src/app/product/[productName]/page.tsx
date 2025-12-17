@@ -2,7 +2,9 @@ import BuyCard from "@/components/product/hero/BuyCard"
 import Gallery from "@/components/product/hero/Gallery"
 import ProductInfo from "@/components/product/hero/ProductInfo"
 import { ProductIntroduction } from "@/components/product/ProductIntroduction"
+import { SpecsTable } from "@/components/product/SpecsTable"
 import { productContent } from "@/data/product-content"
+import { productSpecs } from "@/data/product-specs"
 
 function Product() {
   return (
@@ -14,7 +16,10 @@ function Product() {
             <Gallery />
             <ProductInfo />
           </div>
-          <ProductIntroduction sections={productContent.sections} />
+          <div className="flex flex-col gap-10">
+            <ProductIntroduction sections={productContent.sections} />
+            <SpecsTable specs={productSpecs} />
+          </div>
         </div>
 
 

@@ -1,5 +1,4 @@
 import { ContentBlock } from "@/types/productContent"
-import { Icon } from "@iconify/react"
 
 type Props = {
     sections: ContentBlock[]
@@ -8,14 +7,11 @@ type Props = {
 export function ProductIntroduction({ sections }: Props) {
     return (
         <div className="space-y-6 border border-gray-200 rounded-xl p-4">
-            <div className="flex items-center gap-2">
-                <Icon className="text-4xl text-sky-600" icon="solar:file-text-bold"/>
-                <h2 className="text-2xl font-medium">معرفی کالا</h2>
-            </div>
+            <h3 className="text-2xl font-medium border-r-8 border-r-sky-500 rounded pr-2">معرفی کالا</h3>
             {sections.map((block, index) => {
                 switch (block.type) {
                     case "heading": {
-                        const className = block.bold ? "font-medium text-2xl" : "font-medium"
+                        const className = block.bold ? "font-medium text-2xl" : "font-medium text-lg"
 
                         switch (block.level) {
                             case 2:
