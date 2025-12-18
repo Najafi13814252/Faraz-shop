@@ -1,3 +1,4 @@
+import CommentsBox from "@/components/product/comments/CommentsBox"
 import BuyCard from "@/components/product/hero/BuyCard"
 import Gallery from "@/components/product/hero/Gallery"
 import ProductInfo from "@/components/product/hero/ProductInfo"
@@ -19,6 +20,7 @@ function Product() {
           <div className="flex flex-col gap-10">
             <ProductIntroduction sections={productContent.sections} />
             <SpecsTable specs={productSpecs} />
+            <CommentsBox />
           </div>
         </div>
 

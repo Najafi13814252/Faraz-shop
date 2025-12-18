@@ -6,8 +6,8 @@ type Props = {
 
 export function SpecsTable({ specs }: Props) {
   return (
-    <div className="overflow-x-auto border border-gray-300 rounded-lg bg-white">
-      <h3 className="text-xl font-medium p-2 mr-4 my-6 border-r-8 border-r-sky-500 rounded pr-2">{specs.title}</h3>
+    <div className="detail-box overflow-x-auto">
+      <h3 className="detail-title p-2 mr-4 my-4">{specs.title}</h3>
 
       <table className="w-full text-sm text-gray-700">
         <tbody>

@@ -6,8 +6,8 @@ type Props = {
 
 export function ProductIntroduction({ sections }: Props) {
     return (
-        <div className="space-y-6 border border-gray-200 rounded-xl p-4">
-            <h3 className="text-2xl font-medium border-r-8 border-r-sky-500 rounded pr-2">معرفی کالا</h3>
+        <div className="detail-box space-y-6 p-4">
+            <h3 className="detail-title">معرفی کالا</h3>
             {sections.map((block, index) => {
                 switch (block.type) {
                     case "heading": {
