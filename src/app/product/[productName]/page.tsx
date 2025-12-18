@@ -3,6 +3,7 @@ import BuyCard from "@/components/product/hero/BuyCard"
 import Gallery from "@/components/product/hero/Gallery"
 import ProductInfo from "@/components/product/hero/ProductInfo"
 import { ProductIntroduction } from "@/components/product/ProductIntroduction"
+import QuetionsBox from "@/components/product/questions/QuetionsBox"
 import { SpecsTable } from "@/components/product/SpecsTable"
 import { productContent } from "@/data/product-content"
 import { productSpecs } from "@/data/product-specs"
@@ -21,6 +22,7 @@ function Product() {
             <ProductIntroduction sections={productContent.sections} />
             <SpecsTable specs={productSpecs} />
             <CommentsBox />
+            <QuetionsBox />
           </div>
         </div>
 
