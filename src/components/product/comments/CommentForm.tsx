@@ -27,19 +27,19 @@ function CommentForm() {
 
             {/* point */}
             <section>
-                <form className="flex items-center gap-4 w-full">
-                    <div className="flex flex-col gap-3 w-1/2">
+                <form className="flex md:flex-row flex-col md:items-center gap-4 w-full">
+                    <div className="flex flex-col gap-3 w-full md:w-1/2">
                         <label htmlFor="+">نکات مثبت:</label>
                         <input type="text" className="w-full bg-gray-50 rounded-lg border border-gray-200 p-2 placeholder:text-sm" id="+" placeholder="نقات قوت را وارد کنید" />
                     </div>
-                    <div className="flex flex-col gap-3 w-1/2">
+                    <div className="flex flex-col gap-3 w-full md:w-1/2">
                         <label htmlFor="-">نکات منفی:</label>
                         <input type="text" className="w-full bg-gray-50 rounded-lg border border-gray-200 p-2 placeholder:text-sm" id="-" placeholder="نقات ضعف را وارد کنید" />
                     </div>
                 </form>
             </section>
 
-            <button className="bg-sky-600 text-white px-20 py-3 font-medium w-fit rounded-lg cursor-pointer">ثبت نظر</button>
+            <button className="bg-sky-600 text-white px-20 py-3 font-medium w-full md:w-fit rounded-lg cursor-pointer">ثبت نظر</button>
 
             <hr className="text-gray-300"/>
 

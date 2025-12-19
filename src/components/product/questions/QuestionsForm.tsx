@@ -8,7 +8,7 @@ function QuestionsForm() {
                 <textarea rows={6} className="w-full bg-gray-50 rounded-lg border border-gray-200 p-2 placeholder:text-sm" placeholder="متن سوال" id="question"></textarea>
             </form>
 
-            <button className="bg-sky-600 text-white px-20 py-3 font-medium w-fit rounded-lg cursor-pointer">ثبت سوال</button>
+            <button className="bg-sky-600 text-white px-20 py-3 font-medium w-full md:w-fit rounded-lg cursor-pointer">ثبت سوال</button>
 
             <hr className="text-gray-300"/>
 

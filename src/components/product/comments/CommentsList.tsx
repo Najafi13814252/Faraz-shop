@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react"
 function CommentsList() {
   return (
     <>
-      <div className="flex items-center justify-between text-sm">
+      <div className="hidden md:flex items-center justify-between text-sm">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1">
             <Icon className="text-2xl" icon="solar:sort-from-top-to-bottom-broken" />
@@ -17,7 +17,7 @@ function CommentsList() {
         <span className="text-gray-700">13 نظر</span>
       </div>
 
-      <div className="border border-gray-200 shadow-md rounded-xl p-4">
+      <div className="border border-gray-200 shadow-md rounded-xl p-4 whitespace-nowrap md:whitespace-normal">
         <div className="flex flex-col gap-6">
           <section>
             <div className="flex items-center gap-2">
@@ -39,7 +39,7 @@ function CommentsList() {
             </div>
           </section>
 
-          <p>این گوشی مناسب است و از نظر کیفیت و متریال با مدل‌های مشابه برابری می‌کند. طراحی زیبا و امکانات کامل آن واقعاً راضی‌کننده است.</p>
+          <p className="truncate md:whitespace-normal">این گوشی مناسب است و از نظر کیفیت و متریال با مدل‌های مشابه برابری می‌کند. طراحی زیبا و امکانات کامل آن واقعاً راضی‌کننده است.</p>
 
           <section className="flex flex-col gap-4">
             <div className="flex items-center gap-2">
@@ -58,17 +58,14 @@ function CommentsList() {
               <div>نارنجی</div>
             </div>
 
-            <div className="flex items-center gap-2">
-              <span className="font-medium">آیا این دیدگاه برایتان مفید بود؟</span>
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2 text-gray-500">
-                  <Icon className="text-2xl" icon="solar:like-outline" />
-                  <span>12</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-500">
-                  <Icon className="text-2xl" icon="solar:dislike-outline" />
-                  <span>2</span>
-                </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2 text-gray-500">
+                <Icon className="text-2xl" icon="solar:like-outline" />
+                <span>12</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-500">
+                <Icon className="text-2xl" icon="solar:dislike-outline" />
+                <span>2</span>
               </div>
             </div>
           </section>

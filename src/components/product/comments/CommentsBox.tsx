@@ -17,9 +17,9 @@ function CommentsBox() {
                 <p className="text-gray-500 text-sm">برای ثبت نظر، از طریق دکمه افزودن دیدگاه جدید استفاده نمایید. اگر این محصول را قبلا خریده باشید، نظر شما به عنوان خریدار ثبت خواهد شد.</p>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex md:flex-row flex-col gap-4">
                 {/* امتیازات */}
-                <section className="flex flex-col items-center gap-4 detail-box p-4 h-fit sticky top-20">
+                <section className="flex flex-col items-center gap-4 detail-box p-4 h-fit static md:sticky md:top-20">
                     <span className="text-4xl font-medium">4.80</span>
 
                     <span className="text-gray-400">48 نظر</span>

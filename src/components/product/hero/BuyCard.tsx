@@ -24,7 +24,7 @@ function BuyCard() {
                 </div>
             </section>
 
-            <section className="flex flex-col gap-4 py-5 border-b border-b-gray-300">
+            <section className="hidden md:flex flex-col gap-4 py-5 border-b border-b-gray-300">
                 <div className="flex items-center justify-end">
                     {/* تعداد */}
                     {/* <div>0</div> */}

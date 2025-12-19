@@ -14,7 +14,7 @@ export function SpecsTable({ specs }: Props) {
           {specs.rows.map((row, idx) => (
             <tr
               key={idx}
-              className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}
+              className={idx % 2 === 0 ? "bg-gray-100/70" : "bg-white"}
             >
               <th className="text-right px-4 py-3 font-medium whitespace-nowrap">
                 {row.label}

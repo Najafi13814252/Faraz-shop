@@ -4,7 +4,7 @@ import Questions from "./Questions"
 function QuestionsList() {
     return (
         <div>
-            <section className="flex items-center justify-between text-sm bg-sky-50 border border-gray-200 p-4 rounded-xl">
+            {/* <section className="flex items-center justify-between text-sm bg-sky-50 border border-gray-200 p-4 rounded-xl">
                 <div className="flex items-center gap-4">
                     <div className="flex items-center gap-1">
                         <Icon className="text-2xl" icon="solar:sort-from-top-to-bottom-broken" />
@@ -17,7 +17,7 @@ function QuestionsList() {
                     </ul>
                 </div>
                 <span className="text-gray-700"><span className="text-sky-500 font-medium">14</span> سوال</span>
-            </section>
+            </section> */}
 
             <Questions />
         </div>

@@ -22,20 +22,22 @@ function ProductInfo() {
                 {/* اطلاعات محصول */}
                 <section className="flex flex-col gap-4">
                     {/* امتیازات */}
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-col md:flex-row md:items-center gap-3">
                         <div className="flex items-center gap-1">
                             <Icon className="text-yellow-400" icon="solar:star-bold" />
                             <span>4.6</span>
                             <span className="text-gray-400 text-xs">(امتیاز ۳۰۸ خریدار)</span>
                         </div>
-                        <button className="flex items-center gap-1 bg-gray-100 text-gray-700 rounded-full px-2 py-1.5 text-xs">
-                            <span>185 دیدگاه</span>
-                            <Icon icon="solar:alt-arrow-left-outline" />
-                        </button>
-                        <button className="flex items-center gap-1 bg-gray-100 text-gray-700 rounded-full px-2 py-1.5 text-xs">
-                            <span>74 پرسش</span>
-                            <Icon icon="solar:alt-arrow-left-outline" />
-                        </button>
+                        <div className="flex gap-2">
+                            <button className="w-fit flex items-center gap-1 bg-gray-100 text-gray-700 rounded-full px-2 py-1.5 text-xs">
+                                <span>185 دیدگاه</span>
+                                <Icon icon="solar:alt-arrow-left-outline" />
+                            </button>
+                            <button className="w-fit flex items-center gap-1 bg-gray-100 text-gray-700 rounded-full px-2 py-1.5 text-xs">
+                                <span>74 پرسش</span>
+                                <Icon icon="solar:alt-arrow-left-outline" />
+                            </button>
+                        </div>
                     </div>
 
                     {/* رنگ */}
@@ -52,9 +54,9 @@ function ProductInfo() {
                 <section className="flex flex-col gap-4">
                     <span className="font-medium">ویژگی‌ها</span>
 
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className="md:grid md:grid-cols-3 flex whitespace-nowrap overflow-x-auto gap-2">
                         {features.map(feature => (
-                            <div className="bg-gray-200/50 rounded-md px-4 py-3 flex flex-col gap-1.5 text-xs" key={feature.id}>
+                            <div className="bg-gray-200/50 rounded-md px-4 py-2 md:py-2.5 flex flex-col gap-1.5 text-xs" key={feature.id}>
                                 <span className="text-gray-500">{feature.title_1}</span>
                                 <span className="text-gray-800">{feature.title_2}</span>
                             </div>
@@ -72,10 +74,10 @@ function ProductInfo() {
                     </div>
                 </section>
 
-                <section className="px-4 border-2 border-dashed border-gray-200 rounded-2xl -mt-5">
+                <section className="px-4 py-2 md:py-0 border-2 border-dashed border-gray-200 rounded-2xl -mt-5">
                     <div className="flex items-center gap-4">
-                        <Icon className="text-7xl text-sky-600" icon="solar:info-circle-bold" />
-                        <p className="text-xs max-w-lg text-sky-700">امکان برگشت کالا در گروه موبایل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمب کالا باز نشده باشد. تمام گوشی‌های دیجی‌کالا ضمانت رجیستری دارند. در صورت وجود مشکل رجیستری، می‌توانید بعد از مهلت قانونی ۳۰ روزه، گوشی خریداری‌شده را مرجوع کنید.</p>
+                        {/* <Icon className="text-7xl text-sky-600" icon="solar:info-circle-bold" /> */}
+                        <p className="text-xs max-w-lg text-sky-700 ">امکان برگشت کالا در گروه موبایل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمب کالا باز نشده باشد. تمام گوشی‌های دیجی‌کالا ضمانت رجیستری دارند. در صورت وجود مشکل رجیستری، می‌توانید بعد از مهلت قانونی ۳۰ روزه، گوشی خریداری‌شده را مرجوع کنید.</p>
                     </div>
                 </section>
             </div>
