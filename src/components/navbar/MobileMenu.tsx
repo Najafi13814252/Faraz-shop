@@ -7,7 +7,7 @@ function MobileMenu() {
                 <Icon className="text-xl text-gray-700" icon="solar:magnifer-outline" />
             </button>
 
-            <button className="p-2 btn-base">
+            <button className="p-2 btn-base bg-sky-100">
                 <Icon className="text-xl text-sky-500" icon="solar:phone-calling-rounded-outline" />
             </button>
         </div>

@@ -38,33 +38,42 @@ export default function Navbar() {
     }
 
     useEffect(() => {
+        let lastScroll = 0
+
         const handleScroll = () => {
+            const now = Date.now()
+            if (now - lastScroll < 150) return
+
             const current = window.pageYOffset
 
             if (current > prevScroll.current) {
-                // اسکرول به پایین
                 setIsShowNavbar(false)
             } else {
-                // اسکرول به بالا
                 setIsShowNavbar(true)
             }
 
             prevScroll.current = current
+            lastScroll = now
         }
 
         window.addEventListener("scroll", handleScroll)
 
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
-        }
+        return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
     return (
-        <>
-            {isShowNavbar && (
-                <nav className={`hidden lg:block bg-white mx-3 pb-4 z-50 transform transition-transform
-                    ${isShowNavbar ? "translate-y-0" : "-translate-y-full"}
-                `}>
+        <div className="relative">
+            <div className={`
+                hidden md:block sticky top-[60px] z-40 mx-3 overflow-hidden transition-[max-height] duration-100
+                ${isShowNavbar ? "max-h-[200px]" : "max-h-0"}
+            `}>
+                <nav
+                    className={`
+            bg-white pb-4
+            transform transition-transform duration-200 ease-in-out
+            ${isShowNavbar ? "translate-y-0" : "-translate-y-full"}
+            `}
+                >
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-12">
                             {headCategories.map(category => (
@@ -82,13 +91,13 @@ export default function Navbar() {
                             <Icon className="text-2xl" icon="solar:phone-calling-rounded-outline" />
                         </div>
                     </div>
-                    {isShowCategory && (
-                        <div>
-                            <Categories />
-                        </div>
-                    )}
                 </nav>
+            </div>
+            {isShowCategory && isShowNavbar && (
+                <div className="absolute top-[60px] right-0 w-fit z-50">
+                    <Categories />
+                </div>
             )}
-        </>
+        </div>
     )
 }
