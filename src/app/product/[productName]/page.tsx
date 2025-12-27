@@ -1,9 +1,8 @@
-import CommentsBox from "@/components/product/comments/CommentsBox"
 import BuyCard from "@/components/product/hero/BuyCard"
 import Gallery from "@/components/product/hero/Gallery"
 import ProductInfo from "@/components/product/hero/ProductInfo"
+import LazyLoadSections from "@/components/product/LazyLoadSections"
 import { ProductIntroduction } from "@/components/product/ProductIntroduction"
-import QuetionsBox from "@/components/product/questions/QuetionsBox"
 import { SpecsTable } from "@/components/product/SpecsTable"
 import { productContent } from "@/data/product-content"
 import { productSpecs } from "@/data/product-specs"
@@ -25,8 +24,7 @@ function Product() {
               </div>
               <ProductIntroduction sections={productContent.sections} />
               <SpecsTable specs={productSpecs} />
-              <CommentsBox />
-              <QuetionsBox />
+              <LazyLoadSections />
             </div>
           </div>
 

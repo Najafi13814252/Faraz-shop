@@ -74,10 +74,10 @@ function ProductInfo() {
                     </div>
                 </section>
 
-                <section className="px-4 py-2 md:py-0 border-2 border-dashed border-gray-200 rounded-2xl -mt-5">
+                <section className="px-4 py-2 md:py-0 border-2 border-dashed border-gray-200 rounded-lg -mt-5">
                     <div className="flex items-center gap-4">
-                        {/* <Icon className="text-7xl text-sky-600" icon="solar:info-circle-bold" /> */}
-                        <p className="text-xs max-w-lg text-sky-700 ">امکان برگشت کالا در گروه موبایل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمب کالا باز نشده باشد. تمام گوشی‌های دیجی‌کالا ضمانت رجیستری دارند. در صورت وجود مشکل رجیستری، می‌توانید بعد از مهلت قانونی ۳۰ روزه، گوشی خریداری‌شده را مرجوع کنید.</p>
+                        <Icon className="text-7xl text-sky-600" icon="solar:info-circle-bold" />
+                        <p className="text-xs max-w-lg text-sky-700 p-2">امکان برگشت کالا در گروه موبایل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمب کالا باز نشده باشد. تمام گوشی‌های دیجی‌کالا ضمانت رجیستری دارند. در صورت وجود مشکل رجیستری، می‌توانید بعد از مهلت قانونی ۳۰ روزه، گوشی خریداری‌شده را مرجوع کنید.</p>
                     </div>
                 </section>
             </div>

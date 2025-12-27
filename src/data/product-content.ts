@@ -17,7 +17,7 @@ export const productContent: ProductContent = {
     },
     {
       type: "image",
-      src: "/images/banner_SlideBanner_1.webp",
+      src: "/images/slideBanner-2.webp",
       alt: "نمای کلی آیفون 17"
     },
     {
@@ -33,7 +33,7 @@ export const productContent: ProductContent = {
     },
     {
       type: "image",
-      src: "/images/banner_SlideBanner_2.webp",
+      src: "/images/slideBanner-2.webp",
       alt: "طراحی بدنه آیفون 17"
     },
     {

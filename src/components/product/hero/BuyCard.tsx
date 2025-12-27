@@ -32,11 +32,11 @@ function BuyCard() {
                     <div className="flex flex-col items-end gap-2">
                         {/* تخفیف */}
                         <div className="flex items-center gap-2 ">
-                            <span className="line-through text-gray-400">{(213000000).toLocaleString("fa-IR")}</span>
-                            <span className="bg-rose-500 text-white px-2 rounded-2xl">{(10).toLocaleString("fa-IR")}%</span>
+                            <span className="line-through text-gray-400">{(213000000).toLocaleString()}</span>
+                            <span className="bg-rose-500 text-white px-2 py-1 rounded-lg">{(10).toLocaleString("fa-IR")}%</span>
                         </div>
                         {/* قیمت با احتساب تخفیف */}
-                        <span className="text-2xl font-semibold text-gray-700">{(191700000).toLocaleString("fa-IR")} <span className="text-sm text-gray-600 font-normal">تومان</span></span>
+                        <span className="text-2xl font-semibold text-gray-700">{(191700000).toLocaleString()} <span className="text-sm text-gray-600 font-normal">تومان</span></span>
                     </div>
                 </div>
                 <button className="bg-sky-600 text-white font-medium rounded-md py-3.5 cursor-pointer">افزودن به سبد خرید</button>

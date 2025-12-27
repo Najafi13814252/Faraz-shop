@@ -4,18 +4,11 @@ import localFont from 'next/font/local'
 import HeaderTop from "@/components/navbar/HeaderTop";
 import Footer from "@/components/Footer";
 
-const iranYekan = localFont({
+const BYekan = localFont({
   src: [
     {
-      path: './../../public/fonts/IRANYekan.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './../../public/fonts/IRANYekan-Medium.woff2',
-      weight: '500',
-      style: 'medium',
-    },
+      path: './../../public/fonts/FontBartar-BYekan.woff',
+    }
   ],
   display: 'swap',
 });
@@ -31,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="rtl" className={iranYekan.className}>
+    <html lang="en" dir="rtl" className={BYekan.className}>
       <body>
         <HeaderTop />
         {children}

@@ -1,6 +1,6 @@
 "use client"
 
-import SideFilter from '@/components/SideFilter'
+import SideFilter from '@/components/sideFilters/SideFilter'
 import SortingFilter from '@/components/SortingFilter'
 import { Icon } from '@iconify/react'
 import { use, useState } from 'react'
