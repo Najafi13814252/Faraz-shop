@@ -15,7 +15,7 @@ export default function Card({ product, children, hCard, onCategory }: Props) {
     return (
         <div className="p-2" key={product.id}>
             <Link href={`/product/${product.id}`}>
-                <div className={`flex flex-col items-center gap-4 p-3 border border-gray-300 rounded-2xl cursor-pointer hover:bg-gray-100 duration-200 ${hCard ? "sm:h-[26rem] h-full" : "h-[24rem]"}`}>
+                <div className={`flex flex-col items-center gap-4 p-3 bg-white border border-gray-300 rounded-2xl cursor-pointer hover:bg-gray-100 duration-200 ${hCard ? "sm:h-[26rem] h-full" : "h-[24rem]"}`}>
                     {product.off !== 0 ? (
                         <div className="flex justify-between pb-0.5 font-medium border-b-4 border-b-red-500 w-full text-center rounded text-red-500">
                             <span>جشنواره</span>

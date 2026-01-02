@@ -37,7 +37,7 @@ export default function CtegoryProductLayout({ children, params }: Props) {
     }
 
     return (
-        <div className="sm:mx-10 my-5">
+        <div className="my-5">
             <div className="flex flex-col gap-10">
                 <div className="w-full flex">
                     {/* side filter */}

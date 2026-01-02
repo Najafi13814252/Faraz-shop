@@ -2,9 +2,11 @@ import { Icon } from "@iconify/react"
 
 function SearchBox() {
     return (
-        <div className="w-full sm:w-[20rem] md:w-[30rem] lg:w-[35rem] hidden sm:block">
-            <form className="flex items-center gap-2 flex-1 px-3 py-2 bg-gray-100 rounded-lg">
-                <Icon className="text-xl text-gray-500" icon="solar:magnifer-outline" />
+        <div className="w-full md:w-80 hidden sm:block">
+            <form className="flex items-center gap-2 flex-1 p-1 border border-gray-300 bg-gray-50 rounded-full">
+                <div className="bg-gray-900 p-2 rounded-full">
+                    <Icon className="text-xl text-white" icon="solar:magnifer-outline" />
+                </div>
                 <input
                     type="text"
                     className="w-full bg-transparent focus:outline-none placeholder:text-sm"

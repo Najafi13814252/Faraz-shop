@@ -13,7 +13,7 @@ export default function Categories() {
     const selectedCategory = categories.find(c => c.id === showFilters)
 
     return (
-        <div className="bg-white border border-gray-100 rounded-2xl shadow-sm -mt-3.5 flex">
+        <div className="bg-white border border-gray-100 rounded-2xl shadow-sm mt-2 flex">
             {/* categories */}
             <div className="flex flex-col gap-2 pl-4 p-2 border-l border-gray-200">
                 {categories.map(caterory => (

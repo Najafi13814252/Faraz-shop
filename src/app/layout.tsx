@@ -13,6 +13,15 @@ const BYekan = localFont({
   display: 'swap',
 });
 
+const Morabba = localFont({
+  src: [
+    {
+      path: './../../public/fonts/Morabba.woff',
+    }
+  ],
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: "فراز شاپ",
   description: "خرید و مقایسه تخصصی موبایل و لوازم الکترونیکی"
@@ -25,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl" className={BYekan.className}>
-      <body>
+      <body className="mx-20">
         <HeaderTop />
         {children}
         <Footer />

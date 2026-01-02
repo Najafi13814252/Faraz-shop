@@ -25,9 +25,13 @@ function BuyCard() {
             </section>
 
             <section className="hidden md:flex flex-col gap-4 py-5 border-b border-b-gray-300">
-                <div className="flex items-center justify-end">
+                <div className="flex items-center justify-between">
                     {/* تعداد */}
-                    {/* <div>0</div> */}
+                    <div className="bg-white border border-gray-300 px-4 py-2 flex items-center gap-6 rounded-lg text-xl">
+                        <button className="cursor-pointer">+</button>
+                        <span>1</span>
+                        <button className="cursor-pointer">-</button>
+                    </div>
                     {/* قیمت */}
                     <div className="flex flex-col items-end gap-2">
                         {/* تخفیف */}
