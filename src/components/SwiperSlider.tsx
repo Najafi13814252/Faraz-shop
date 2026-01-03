@@ -6,6 +6,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from 'swiper/modules';
 import { Icon } from "@iconify/react";
 
+import 'swiper/css';
+import { useState } from "react";
+
+
 interface Props {
     products: Products[]
     discountBox?: boolean
@@ -13,7 +17,8 @@ interface Props {
 }
 
 export default function SwiperSlider({ products, discountBox, title }: Props) {
-    
+    const [isBeginning, setIsBeginning] = useState(true)
+    const [isEnd, setIsEnd] = useState(false)
     return (
         <div className="relative">
             <SectionProducts discountBox={discountBox} title={title}>
@@ -22,8 +27,16 @@ export default function SwiperSlider({ products, discountBox, title }: Props) {
                     slidesPerView={5}
                     modules={[Navigation]}
                     navigation={{
-                        nextEl: '.my-swiper-button-next',
-                        prevEl: '.my-swiper-button-prev',
+                        nextEl: ".button-next-slide",
+                        prevEl: ".button-prev-slide"
+                    }}
+                    onSwiper={(swiper) => {
+                        setIsBeginning(swiper.isBeginning)
+                        setIsEnd(swiper.isEnd)
+                    }}
+                    onSlideChange={(swiper) => {
+                        setIsBeginning(swiper.isBeginning)
+                        setIsEnd(swiper.isEnd)
                     }}
                     breakpoints={{
                         360: { slidesPerView: 1.2 },
@@ -39,11 +52,11 @@ export default function SwiperSlider({ products, discountBox, title }: Props) {
                 </Swiper>
 
                 {/* دکمه‌های شخصی‌سازی شده */}
-                <button className="hidden my-swiper-button-prev absolute right-1.5 top-1/2 -translate-y-1/2 z-10 p-2.5 border border-gray-200 bg-gray-50/90 hover:bg-white rounded-full shadow-lg md:flex items-center justify-center transition-all duration-300 hover:shadow-xl cursor-pointer">
+                <button className={`button-prev-slide  navigation-swiper-slider right-1.5 ${isBeginning ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                     <Icon className="text-2xl" icon="solar:alt-arrow-right-outline" />
                 </button>
 
-                <button className="hidden my-swiper-button-next absolute left-1.5 top-1/2 -translate-y-1/2 z-10 p-2.5 border border-gray-200 bg-gray-50/90 hover:bg-white rounded-full shadow-lg md:flex items-center justify-center transition-all duration-300 hover:shadow-xl cursor-pointer">
+                <button className={`button-next-slide  navigation-swiper-slider left-1.5 ${isEnd ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                     <Icon className="text-2xl" icon="solar:alt-arrow-left-outline" />
                 </button>
             </SectionProducts>

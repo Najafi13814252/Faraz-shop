@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 import { Icon } from "@iconify/react";
 
@@ -36,7 +36,7 @@ export default function Navbar() {
 
     return (
         <div className="relative">
-            <nav className="bg-gray-950 p-2.5 rounded-full" >
+            <nav className="bg-gray-950 p-2.5 rounded-full hidden md:block">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-6">
                         {headCategories.map(category => (

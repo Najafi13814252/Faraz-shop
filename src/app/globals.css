@@ -15,8 +15,25 @@ input[type=range]::-webkit-slider-thumb {
     @apply bg-sky-500
 }
 
+.custom-pagination .swiper-pagination-bullet {
+    @apply w-2 h-2 bg-gray-300 rounded-full cursor-pointer;
+    transition:
+        transform 0.35s ease,
+        width 0.35s ease,
+        background-color 0.35s ease,
+        opacity 0.35s ease;
+}
+.custom-pagination .swiper-pagination-bullet-active {
+    @apply bg-blue-700 w-4;
+    transform: scale(1.1);
+}
+
+.navigation-swiper-slider {
+    @apply hidden absolute top-1/2 -translate-y-1/2 z-10 p-2.5 border border-gray-200 bg-gray-50/90 hover:bg-white rounded-full shadow-lg md:flex items-center justify-center transition-all duration-300 hover:shadow-xl cursor-pointer
+}
+
 .btn-base {
-  @apply border border-gray-300 rounded-full hover:bg-gray-100 transition cursor-pointer;
+    @apply border border-gray-300 rounded-full hover:bg-gray-100 transition cursor-pointer;
 }
 
 .step-menu {

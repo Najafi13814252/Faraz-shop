@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import MobileMenu from "./categoryOnMobile/MobileMenu";
+import Link from "next/link";
 
 interface Item {
     id: number;
@@ -63,11 +64,13 @@ export default function Footer() {
     }
     return (
         <>
-            <footer className="mt-10 w-full pt-10 pb-20 pr-2 md:pr-20 bg-sky-700">
+            <footer className="mt-10 w-full pt-10 pb-20 px-4 bg-gray-900 rounded-4xl">
                 <div className="flex flex-col md:flex-row gap-16 md:gap-36 items-center text-white">
                     {/* introduction */}
                     <div className="flex flex-col gap-6">
-                        <Image className="bg-white px-4 py-2 rounded-2xl" src="/images/logo.webp" width="200" height="200" alt="Logo" />
+                        <Link href="/">
+                            <h1 className="text-4xl font-black font-Morabba text-white">بلک <span className="text-blue-700">شاپ</span></h1>
+                        </Link>
 
                         <p className="w-full md:w-80">
                             بنیاد تعالی آموزشی نواندیش با هدف ارتقاء دانش و مهارت‌های تخصصی در سازمان‌ها و
@@ -80,9 +83,9 @@ export default function Footer() {
                             {links.apps.map((app) => (
                                 <div
                                     key={app.id}
-                                    className="flex items-center p-2 rounded-full bg-sky-800 cursor-pointer hover:scale-125 duration-200"
+                                    className="flex items-center p-2 rounded-full bg-blue-700 cursor-pointer hover:scale-125 duration-200"
                                 >
-                                    {app.icon_name && <Icon className="text-main-100 text-xl" icon={app.icon_name} />}
+                                    {app.icon_name && <Icon className="text-white text-xl" icon={app.icon_name} />}
                                 </div>
                             ))}
                         </div>
@@ -149,7 +152,7 @@ export default function Footer() {
             </div>
 
             {showMenu && (
-                <MobileMenu onClose={() => setShowMenu(false)}/>
+                <MobileMenu onClose={() => setShowMenu(false)} />
             )}
         </>
     );
