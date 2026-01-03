@@ -35,7 +35,7 @@ export default function Categories() {
                         {/* sub filters */}
                         <div className="flex flex-col gap-4 mt-2 relative right-3">
                             {filter.subFilter.map(sub => (
-                                <span key={sub.id} className={`text-sm cursor-pointer duration-200  ${selectedCategory.hoverColor}`}>{sub.label}</span>
+                                <span key={sub.id} className={`cursor-pointer duration-200 text-gray-700  ${selectedCategory.hoverColor}`}>{sub.label}</span>
                             ))}
                         </div>
                     </div>

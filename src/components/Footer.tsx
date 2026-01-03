@@ -24,13 +24,13 @@ export default function Footer() {
         quick: [
             { id: 1, title: "صفحه اصلی" },
             { id: 2, title: "درباره ما" },
-            { id: 3, title: "دوره‌های پیشنهادی" },
-            { id: 4, title: "مدرسین" },
+            { id: 3, title: "پرسش‌های متداول" },
+            { id: 4, title: "شرایط خرید" },
         ],
         useful: [
             { id: 1, title: "ارتباط با ما" },
-            { id: 2, title: "دوره‌ها" },
-            { id: 3, title: "دروس" },
+            { id: 2, title: "کالاها" },
+            { id: 3, title: "دسته‌بندی" },
             { id: 4, title: "ایجاد حساب کاربری" },
         ],
         concat: [
@@ -64,19 +64,16 @@ export default function Footer() {
     }
     return (
         <>
-            <footer className="mt-10 w-full pt-10 pb-20 px-4 bg-gray-900 rounded-4xl">
+            <footer className="mt-10 w-full pt-10 pb-20 px-4 mb-4 bg-gray-900 rounded-4xl">
                 <div className="flex flex-col md:flex-row gap-16 md:gap-36 items-center text-white">
                     {/* introduction */}
                     <div className="flex flex-col gap-6">
                         <Link href="/">
-                            <h1 className="text-4xl font-black font-Morabba text-white">بلک <span className="text-blue-700">شاپ</span></h1>
+                            <h1 className="text-4xl font-black font-Morabba text-blue-700">فراز <span className="text-white">شاپ</span></h1>
                         </Link>
 
                         <p className="w-full md:w-80">
-                            بنیاد تعالی آموزشی نواندیش با هدف ارتقاء دانش و مهارت‌های تخصصی در سازمان‌ها و
-                            شرکت‌ها، با بهره‌گیری از اساتید مجرب و محتوای به‌روز، بستری حرفه‌ای برای آموزش و
-                            توسعه منابع انسانی فراهم کرده است.
-                            ما همراه شما هستیم در مسیر رشد، یادگیری و تعالی سازمانی.
+                            در فروشگاه آنلاین ما، بهترین مدل‌های موبایل و لپ‌تاپ از برندهای معتبر جهانی را با کیفیت بالا و قیمتی مناسب برای شما فراهم آورده‌ایم. با انتخاب محصولات ما، تجربه‌ای حرفه‌ای و لذت‌بخش از فناوری را در خانه یا محل کار داشته باشید.
                         </p>
 
                         <div className="flex items-center gap-4">
@@ -95,11 +92,11 @@ export default function Footer() {
                     <ul className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-40 w-full">
                         {/* quick links */}
                         <li className="flex flex-col gap-1">
-                            <span className="mb-3">لینک‌های سریع</span>
+                            <span className="mb-2 font-Morabba">لینک‌های سریع</span>
                             {links.quick.map((qu) => (
                                 <ul
                                     key={qu.id}
-                                    className="flex items-center gap-2 cursor-pointer hover:text-main-200 duration-200"
+                                    className="flex items-center gap-2 cursor-pointer hover:text-blue-700 duration-200"
                                 >
                                     <Icon icon="solar:arrow-left-bold-duotone" />
                                     <span>{qu.title}</span>
@@ -109,11 +106,11 @@ export default function Footer() {
 
                         {/* useful links */}
                         <li className="flex flex-col gap-1">
-                            <span className="mb-3">لینک‌های کاربردی</span>
+                            <span className="mb-2 font-Morabba">لینک‌های کاربردی</span>
                             {links.useful.map((use) => (
                                 <ul
                                     key={use.id}
-                                    className="flex items-center gap-2 cursor-pointer hover:text-main-200 duration-200"
+                                    className="flex items-center gap-2 cursor-pointer hover:text-blue-700 duration-200"
                                 >
                                     <Icon icon="solar:arrow-left-bold-duotone" />
                                     <span>{use.title}</span>
@@ -123,7 +120,7 @@ export default function Footer() {
 
                         {/* contact us */}
                         <li className="flex flex-col gap-3">
-                            <span className="mb-3">ارتباط با ما</span>
+                            <span className="mb-2 font-Morabba">ارتباط با ما</span>
                             {links.concat.map((us) => (
                                 <ul key={us.id} className="flex items-center gap-2">
                                     {us.icon_name && <Icon icon={us.icon_name} />}
