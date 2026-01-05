@@ -7,8 +7,8 @@ import HeaderMain from "@/components/navbar/HeaderMain";
 
 export default function Navbar() {
   return (
-    <header className="w-full sticky top-0 z-50 bg-white">
-      <div className="mx-auto pt-8 pb-3 md:pb-8  flex items-center justify-between gap-4">
+    <header className="w-full sticky top-0 z-50 bg-white px-4 lg:px-20">
+      <div className="mx-auto pt-4 md:pt-8 md:pb-8  flex items-center justify-between gap-4">
 
         {/* SearchBox */}
         <SearchBox />

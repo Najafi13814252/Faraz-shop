@@ -13,7 +13,7 @@ function StepCategories({categories, onStepCategories}: {
                         className="flex gap-2 relative cursor-pointer"
                         onClick={() => onStepCategories(category.id)}
                     >
-                        <Icon className={`text-2xl ${category.iconColor}`} icon={category.icon} />
+                        <Icon className="text-2xl text-blue-700" icon={category.icon} />
                         <span>{category.name}</span>
                         <Icon className="absolute left-0" icon="solar:alt-arrow-left-outline" />
                     </button>

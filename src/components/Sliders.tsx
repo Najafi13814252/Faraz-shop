@@ -55,7 +55,7 @@ export default function Sliders() {
                 </button>
             </div>
 
-            <div className="custom-pagination flex gap-2 justify-center relative bottom-5 z-20" />
+            <div className="custom-pagination bg-white/50 rounded-full w-fit mx-auto px-3 py-2 flex gap-2 justify-center relative bottom-8 z-20" />
         </div>
     )
 }

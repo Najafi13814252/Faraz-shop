@@ -3,11 +3,7 @@ const categories: Categories[] = [
     {
         id: 1,
         name: 'موبایل',
-        icon: 'solar:smartphone-2-bold-duotone',
-        iconColor: 'text-pink-500',
-        filterBorder: "border-pink-500",
-        filterBg: "bg-pink-100",
-        hoverColor: 'hover:text-pink-500',
+        icon: 'solar:smartphone-2-bold',
         category: 'mobile',
         categoryFilters: [
             // by brand
@@ -47,11 +43,7 @@ const categories: Categories[] = [
     {
         id: 2,
         name: 'لپ تاپ',
-        icon: 'solar:laptop-bold-duotone',
-        iconColor: 'text-sky-500',
-        filterBorder: "border-sky-500",
-        filterBg: "bg-sky-100",
-        hoverColor: 'hover:text-sky-500',
+        icon: 'solar:laptop-bold',
         category: 'laptop',
         categoryFilters: [
             // by brand
@@ -95,11 +87,7 @@ const categories: Categories[] = [
 
         id: 3,
         name: 'ساعت هوشمند',
-        icon: 'solar:watch-square-bold-duotone',
-        iconColor: 'text-orange-500',
-        filterBorder: "border-orange-500",
-        filterBg: "bg-orange-100",
-        hoverColor: 'hover:text-orange-500',
+        icon: 'solar:watch-square-bold',
         category: 'watch',
         categoryFilters: [
             // by brand
@@ -138,12 +126,8 @@ const categories: Categories[] = [
     {
         id: 4,
         name: 'تبلت',
-        icon: 'solar:tablet-bold-duotone',
+        icon: 'solar:tablet-bold',
         category: 'tablet',
-        iconColor: 'text-fuchsia-500',
-        filterBorder: "border-fuchsia-500",
-        filterBg: "bg-fuchsia-100",
-        hoverColor: 'hover:text-fuchsia-500',
         categoryFilters: [
             // by brand
             {
@@ -173,11 +157,7 @@ const categories: Categories[] = [
     {
         id: 5,
         name: 'هندزفری',
-        icon: 'solar:airbuds-bold-duotone',
-        iconColor: 'text-green-500',
-        filterBorder: "border-green-500",
-        filterBg: "bg-green-100",
-        hoverColor: 'hover:text-green-500',
+        icon: 'solar:airbuds-bold',
         category: 'airpod',
         categoryFilters: [
             // by brand
@@ -211,11 +191,7 @@ const categories: Categories[] = [
     {
         id: 6,
         name: 'گیمینگ',
-        icon: 'solar:gamepad-bold-duotone',
-        iconColor: 'text-red-500',
-        filterBorder: "border-red-500",
-        filterBg: "bg-red-100",
-        hoverColor: 'hover:text-red-500',
+        icon: 'solar:gamepad-bold',
         category: 'game',
         categoryFilters: [
             // by brand

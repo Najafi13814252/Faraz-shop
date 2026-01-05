@@ -58,7 +58,7 @@ export default function MobileMenu({ onClose }: { onClose: () => void }) {
     }
 
     return (
-        <menu className="bg-gray-500/50 backdrop-blur-xs w-full p-1.5 z-50 fixed top-14 bottom-14 flex justify-between">
+        <menu className="bg-gray-500/50 backdrop-blur-xs w-full p-1.5 z-50 fixed top-20 bottom-14 flex justify-between">
 
             <div className="w-5/6 h-full flex">
                 <div className="bg-white w-full h-full rounded-md p-5 flex flex-col gap-8 relative">

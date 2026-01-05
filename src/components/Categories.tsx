@@ -17,9 +17,9 @@ export default function Categories() {
             {/* categories */}
             <div className="flex flex-col gap-2 pl-4 p-2 border-l border-gray-200">
                 {categories.map(caterory => (
-                    <div key={caterory.id} className={`flex items-center gap-2 cursor-pointer p-2 rounded-xl duration-200 hover:bg-gray-100 ${showFilters === caterory.id ? `${caterory.iconColor} ${caterory.filterBg} pointer-events-none` : 'text-gray-800'}`} onClick={() => setShowFilters(caterory.id)}>
+                    <div key={caterory.id} className={`flex items-center gap-2 cursor-pointer p-2 rounded-xl duration-200 hover:bg-gray-100 ${showFilters === caterory.id ? 'bg-blue-700 text-white pointer-events-none' : ''}`} onClick={() => setShowFilters(caterory.id)}>
                         <div className="bg-gray-50 shadow-inner rounded-full p-2">
-                            <Icon className={`text-2xl ${caterory.iconColor}`} icon={caterory.icon} />
+                            <Icon className="text-2xl text-blue-700" icon={caterory.icon} />
                         </div>
                         <span>{caterory.name}</span>
                     </div>
@@ -27,15 +27,15 @@ export default function Categories() {
             </div>
 
             {/* filters */}
-            <div className={`flex gap-20 px-2 pt-6 w-[43rem] rounded-l-2xl ${selectedCategory?.filterBg}`}>
+            <div className="grid grid-cols-3 px-6 pt-6 w-[43rem] rounded-l-2xl bg-gray-100">
                 {selectedCategory?.categoryFilters?.map(filter => (
                     <div key={filter.id} className="flex flex-col">
-                        <span className={`border-r-4 pr-2 rounded ${selectedCategory.filterBorder}`}>{filter.label}</span>
+                        <span className="border-r-4 border-blue-700 pr-2 text-lg rounded font-medium">{filter.label}</span>
 
                         {/* sub filters */}
-                        <div className="flex flex-col gap-4 mt-2 relative right-3">
+                        <div className="flex flex-col gap-4 mt-1">
                             {filter.subFilter.map(sub => (
-                                <span key={sub.id} className={`cursor-pointer duration-200 text-gray-700  ${selectedCategory.hoverColor}`}>{sub.label}</span>
+                                <span key={sub.id} className="text-lg cursor-pointer duration-200 text-gray-700">{sub.label}</span>
                             ))}
                         </div>
                     </div>

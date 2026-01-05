@@ -34,9 +34,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl" className={BYekan.className}>
-      <body className="mx-4 lg:mx-20">
+      <body>
         <HeaderTop />
-        {children}
+        <main className="mx-4 lg:mx-20">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
