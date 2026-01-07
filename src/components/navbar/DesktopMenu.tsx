@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react"
+import Link from "next/link"
 
 function DesktopMenu() {
     return (
@@ -8,14 +9,16 @@ function DesktopMenu() {
                 <span className="text-sm relative bottom-0.5">ورود | ثبت‌نام</span>
             </button>
 
-            <button className="relative">
-                <div className="p-2 btn-base bg-gray-900">
-                    <Icon className="text-2xl text-white" icon="solar:cart-4-outline" />
-                </div>
-                <span className="absolute -right-2 -top-1 bg-blue-700 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center shadow">
-                    0
-                </span>
-            </button>
+            <Link href="/shopping-cart">
+                <button className="relative">
+                    <div className="p-2 btn-base bg-gray-900">
+                        <Icon className="text-2xl text-white" icon="solar:cart-4-outline" />
+                    </div>
+                    <span className="absolute -right-2 -top-1 bg-blue-700 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center shadow">
+                        0
+                    </span>
+                </button>
+            </Link>
         </div>
     )
 }
