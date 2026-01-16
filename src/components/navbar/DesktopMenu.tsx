@@ -6,7 +6,9 @@ function DesktopMenu() {
         <div className="hidden sm:flex items-center gap-5">
             <button className="flex items-center gap-2 px-4 py-2.5 btn-base">
                 <Icon className="rotate-180 text-xl" icon="solar:login-2-linear" />
-                <span className="text-sm relative bottom-0.5">ورود | ثبت‌نام</span>
+                <Link href="/user-panel">
+                    <span className="text-sm relative bottom-0.5">ورود | ثبت‌نام</span>
+                </Link>
             </button>
 
             <Link href="/shopping-cart">

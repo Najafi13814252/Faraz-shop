@@ -23,6 +23,7 @@ input[type=range]::-webkit-slider-thumb {
         background-color 0.35s ease,
         opacity 0.35s ease;
 }
+
 .custom-pagination .swiper-pagination-bullet-active {
     @apply bg-blue-700 w-4;
     transform: scale(1.1);
