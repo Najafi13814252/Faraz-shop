@@ -9,13 +9,14 @@ interface Props {
     children?: React.ReactNode
     hCard?: boolean
     onCategory?: boolean
+    favorite?: boolean
 }
 
-export default function Card({ product, children, hCard, onCategory }: Props) {
+export default function Card({ product, children, hCard, onCategory, favorite }: Props) {
     return (
         <div className="p-2" key={product.id}>
             <Link href={`/product/${product.id}`}>
-                <div className={`flex flex-col items-center gap-4 p-3 bg-white border border-gray-300 rounded-2xl cursor-pointer hover:bg-gray-100 duration-200 ${hCard ? "sm:h-[26rem] h-full" : "h-[24rem]"}`}>
+                <div className={`flex flex-col items-center gap-4 p-3 bg-white border border-gray-300 rounded-2xl cursor-pointer hover:bg-gray-100 duration-200 ${hCard ? "sm:h-[26rem] h-full" : " h-full"}`}>
                     {product.off !== 0 ? (
                         <div className="flex justify-between pb-0.5 font-medium border-b-4 border-b-red-500 w-full text-center rounded text-red-500">
                             <span>جشنواره</span>
@@ -27,9 +28,9 @@ export default function Card({ product, children, hCard, onCategory }: Props) {
                                     } else {
                                         return (
                                             <span>
-                                                {hours.toLocaleString("fa-IR")}:
-                                                {minutes.toLocaleString("fa-IR")}:
-                                                {seconds.toLocaleString("fa-IR")}
+                                                {hours}:
+                                                {minutes}:
+                                                {seconds}
                                             </span>
                                         );
                                     }
@@ -55,8 +56,16 @@ export default function Card({ product, children, hCard, onCategory }: Props) {
                                     </div>
                                 </div>
                             ) : (<span className="w-full text-left">{product.price.toLocaleString("fa-IR")} تومان</span>)}
+
+                            {favorite && (
+                                <div className="w-full flex gap-2">
+                                    <button className="w-1/4 py-2 rounded-lg border border-gray-500 text-gray-500">حذف</button>
+                                    <button className="w-3/4 py-2 rounded-lg border border-sky-700 text-sky-700">افزودن به سبد خرید</button>
+                                </div>
+                            )}
                         </div>
                     </div>
+
                 </div>
             </Link>
         </div>

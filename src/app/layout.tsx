@@ -22,6 +22,15 @@ const Morabba = localFont({
   display: 'swap',
 });
 
+const Shabnam = localFont({
+  src: [
+    {
+      path: './../../public/fonts/Shabnam.woff',
+    }
+  ],
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   title: "فراز شاپ",
   description: "خرید و مقایسه تخصصی موبایل و لوازم الکترونیکی"
@@ -33,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" dir="rtl" className={BYekan.className}>
+    <html lang="en" dir="rtl" className={Shabnam.className}>
       <body>
         <HeaderTop />
         <main className="mx-4 lg:mx-20">

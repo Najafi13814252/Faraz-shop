@@ -3,6 +3,7 @@
 @theme {
     --font-BYekan: "BYekan", sans-serif;
     --font-Morabba: "Morabba", sans-serif;
+    --font-Shabnam: "Shabnam", sans-serif;
 }
 
 input[type=range]::-webkit-slider-thumb {

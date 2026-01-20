@@ -4,7 +4,7 @@ function Orders() {
       {/* فیلتر و سرچ سفارشات */}
       <section className="flex justify-between items-center rounded-2xl p-5 border border-gray-200 shadow">
         <select className="border border-gray-700 rounded-lg px-2 py-1 w-40">
-          <option selected>همه وضعیت‌ها</option>
+          <option>همه وضعیت‌ها</option>
           <option>جاری</option>
           <option>تحویل شده</option>
           <option>مرجوع شده</option>
