@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 
-import { Icon } from "@iconify/react";
-
 import categories from "@/data/categories";
+import Icon, { IconName } from "./ui/Icon";
 
 export default function Categories() {
 
@@ -19,7 +18,8 @@ export default function Categories() {
                 {categories.map(caterory => (
                     <div key={caterory.id} className={`flex items-center gap-2 cursor-pointer p-2 rounded-xl duration-200 hover:bg-gray-100 ${showFilters === caterory.id ? 'bg-blue-700 text-white pointer-events-none' : ''}`} onClick={() => setShowFilters(caterory.id)}>
                         <div className="bg-gray-50 shadow-inner rounded-full p-2">
-                            <Icon className="text-2xl text-blue-700" icon={caterory.icon} />
+                            {/* <Icon className="text-2xl text-blue-700" icon={caterory.icon} /> */}
+                            <Icon name={caterory.icon as IconName} className="text-blue-700" />
                         </div>
                         <span>{caterory.name}</span>
                     </div>

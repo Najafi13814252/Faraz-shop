@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import 'swiper/css';
-import { Icon } from "@iconify/react";
+import Icon from "./ui/Icon";
 
 const slides = [
     { id: 1, src: '/images/slideBanner-1.webp' },
@@ -46,12 +46,12 @@ export default function Sliders() {
 
             <div className="hidden md:block pointer-events-none absolute top-3/4 right-10 z-20">
                 <button className="button-prev-slide pointer-events-auto opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer">
-                    <Icon className="text-4xl text-white/80" icon="solar:round-alt-arrow-right-bold" />
+                    <Icon name="arrow_right_bold" size={36} className="text-white/80"/>
                 </button>
 
                 <button
                     className="button-next-slide pointer-events-auto opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer">
-                    <Icon className="text-4xl text-white/80" icon="solar:round-alt-arrow-left-bold" />
+                    <Icon name="arrow_left_bold" size={36} className="text-white/80"/>
                 </button>
             </div>
 

@@ -3,7 +3,7 @@ const categories: Categories[] = [
     {
         id: 1,
         name: 'موبایل',
-        icon: 'solar:smartphone-2-bold',
+        icon: 'mobile',
         category: 'mobile',
         categoryFilters: [
             // by brand
@@ -43,7 +43,7 @@ const categories: Categories[] = [
     {
         id: 2,
         name: 'لپ تاپ',
-        icon: 'solar:laptop-bold',
+        icon: 'laptop',
         category: 'laptop',
         categoryFilters: [
             // by brand
@@ -87,7 +87,7 @@ const categories: Categories[] = [
 
         id: 3,
         name: 'ساعت هوشمند',
-        icon: 'solar:watch-square-bold',
+        icon: 'watch',
         category: 'watch',
         categoryFilters: [
             // by brand
@@ -126,7 +126,7 @@ const categories: Categories[] = [
     {
         id: 4,
         name: 'تبلت',
-        icon: 'solar:tablet-bold',
+        icon: 'tablet',
         category: 'tablet',
         categoryFilters: [
             // by brand
@@ -157,7 +157,7 @@ const categories: Categories[] = [
     {
         id: 5,
         name: 'هندزفری',
-        icon: 'solar:airbuds-bold',
+        icon: 'airpod',
         category: 'airpod',
         categoryFilters: [
             // by brand
@@ -188,23 +188,23 @@ const categories: Categories[] = [
         ]
     },
     // game
-    {
-        id: 6,
-        name: 'گیمینگ',
-        icon: 'solar:gamepad-bold',
-        category: 'game',
-        categoryFilters: [
-            // by brand
-            {
-                id: 1,
-                label: 'کنسول بازی',
-                subFilter: [
-                    { id: 1, label: 'پلی استیشن' },
-                    { id: 2, label: 'ایکس باکس' },
-                ]
-            },
-        ]
-    },
+    // {
+    //     id: 6,
+    //     name: 'گیمینگ',
+    //     icon: 'solar:gamepad-bold',
+    //     category: 'game',
+    //     categoryFilters: [
+    //         // by brand
+    //         {
+    //             id: 1,
+    //             label: 'کنسول بازی',
+    //             subFilter: [
+    //                 { id: 1, label: 'پلی استیشن' },
+    //                 { id: 2, label: 'ایکس باکس' },
+    //             ]
+    //         },
+    //     ]
+    // },
 ]
 
 export default categories
